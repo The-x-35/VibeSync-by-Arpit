@@ -1,0 +1,34 @@
+.share-container {
+  p,
+  .p {
+    margin-bottom: 1rem;
+  }
+
+  .input {
+    border: 1px solid gray;
+    background: white;
+    padding: 0.5rem;
+    border-radius: 0.25rem;
+    width: 100%;
+    color: #1e89f6;
+    margin-right: 0.5rem;
+  }
+
+  
+}
+
+.qrcode {
+  display: block;
+  align-items: center;
+  justify-content: center;  
+  margin: auto;  
+  background-color: white;
+  cursor: pointer;
+  text-align: center;
+  
+  svg {
+    display: inline-block;
+    max-height: 100vh;
+  }
+}
+

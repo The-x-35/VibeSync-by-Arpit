@@ -1,0 +1,25 @@
+{
+  "applinks": {
+    "details": [
+        {
+          "appIDs": [ "8SS3YPUJH9.de.holtwick.Briefing" ],
+          "components": [               
+            {
+              "/": "/ng/*",
+              "comment": "Enter a room-VibeSync by Arpit"
+            },
+            {
+              "/": "/",
+              "comment": ""
+            }
+          ]
+        }
+    ]
+  },
+  "webcredentials": {
+    "apps": [ "8SS3YPUJH9.de.holtwick.Briefing" ]
+  },
+  "appclips": {
+      "apps": ["8SS3YPUJH9.de.holtwick.Briefing.BriefingAppClip"]
+  }
+}

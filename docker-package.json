@@ -1,0 +1,18 @@
+{
+  "name": "",
+  "version": "0.1.0",
+  "private": true,
+  "author": {
+    "name": "",
+    "email": "",
+    "url": ""
+  },
+  "type": "module",
+  "scripts": {
+    "start": "node dist/main.cjs"
+  },
+  "dependencies": {},
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}

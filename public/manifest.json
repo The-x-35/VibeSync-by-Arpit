@@ -1,0 +1,41 @@
+{
+  "name": "VibeSync by Arpit",
+  "short_name": "VibeSync by Arpit",
+  "icons": [
+    {
+      "src": "/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#272727",
+  "theme_color": "#272727",
+  "author": "Dirk Holtwick",
+  "description": "VibeSync by Arpit",
+  "homepage_url": "",
+  "url": "",
+  "lang": "EN",
+  "screenshots": [
+    {
+      "src": "",
+      "type": "image/png",
+      "size": "1478x1988",
+      "description": ""
+    }
+  ],
+  "features": [
+    "Direct secure group video chat",
+    "Verify integrity",
+    ""
+  ],
+  "orientation": "any",
+  "prefer_related_applications": false
+}

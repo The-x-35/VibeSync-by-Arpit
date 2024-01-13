@@ -1,0 +1,16 @@
+.github
+.out*
+.pnpm*
+*.local
+*.log
+data
+dist
+docker
+docker*
+docs
+node_modules
+pnpm*
+tmp
+www
+scripts
+src

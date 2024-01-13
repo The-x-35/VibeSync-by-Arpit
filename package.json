@@ -1,0 +1,72 @@
+{
+  "name": "briefing",
+  "version": "3.1.11",
+  "private": true,
+  "description": "Secure direct video chat",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/holtwick/briefing.git"
+  },
+  "funding": {
+    "type": "GitHub Sponsors ❤",
+    "url": "https://github.com/sponsors/holtwick"
+  },
+  "license": "AGPL-3.0-or-later",
+  "author": {
+    "name": "Dirk Holtwick",
+    "email": "dirk.holtwick@gmail.com",
+    "url": "https://holtwick.de"
+  },
+  "type": "module",
+  "scripts": {
+    "build": "cross-env MODE=production nr build:basis",
+    "build:basis": "nr clean && zerva build src/zerva/index.ts && vite build --mode $MODE",
+    "build:docker": "cross-env MODE=production-docker nr build:basis && ./scripts/make-docker.sh",
+    "check": "vue-tsc --noEmit -p ./tsconfig.json",
+    "clean": "rm -rf dist www",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "preview": "vite preview",
+    "reset": "rm -rf node_modules pnpm-lock.yaml dist dist_www www",
+    "serve": "cross-env ZEED=* LEVEL=i node dist/main.cjs",
+    "start": "cross-env DEBUG=1 ZEED=* LEVEL=a zerva src/zerva/index.ts",
+    "test": "vitest",
+    "upload:dockerhub": "nr build:docker && (cd docker && docker login -u holtwick && docker buildx build --platform linux/arm64,linux/amd64,linux/s390x,linux/arm/v7,linux/arm/v6 -t holtwick/briefing:$npm_package_version -t holtwick/briefing:latest --push .)"
+  },
+  "dependencies": {
+    "@sentry/browser": "^7.60.0",
+    "@sentry/tracing": "^7.60.0",
+    "@vueuse/core": "^10.2.1",
+    "@zerva/core": "^0.32.0",
+    "@zerva/http": "^0.32.0",
+    "@zerva/websocket": "^0.32.1",
+    "bufferutil": "^4.0.8",
+    "clipboard-copy": "^4.0.1",
+    "lodash": "^4.17.21",
+    "utf-8-validate": "^6.0.3",
+    "vue": "^3.3.4",
+    "vue-i18n": "^9.2.2",
+    "zeed": "^0.11.3"
+  },
+  "devDependencies": {
+    "@antfu/eslint-config": "^0.39.8",
+    "@antfu/ni": "^0.21.5",
+    "@types/node": "^20.4.5",
+    "@vitejs/plugin-vue": "^4.2.3",
+    "@zerva/bin": "^0.32.0",
+    "@zerva/vite": "^0.32.0",
+    "cross-env": "^7.0.3",
+    "eslint": "^8.45.0",
+    "ministun": "^1.0.6",
+    "sass": "^1.64.1",
+    "tsc": "^2.0.4",
+    "typescript": "^5.1.6",
+    "vite": "^4.4.7",
+    "vitest": "^0.33.0",
+    "vue-tsc": "^1.8.6",
+    "zeed-dom": "^0.12.5"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}

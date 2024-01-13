@@ -1,0 +1,13 @@
+{
+  "prettier.enable": false,
+  "editor.formatOnSave": false,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit"
+  },
+  "i18n-ally.localesPaths": [
+    "locales",
+    "legacy/app/src/locales",
+    "legacy/electron/dist_electron/win-unpacked/locales",
+    "legacy/internal/briefing-internal/src/locales"
+  ]
+}
